@@ -15,6 +15,6 @@ class IdeaController extends Controller
             ]
         );
 
-        return redirect()->route('home');
+        return redirect()->route('home')->with('success','Idea created succesfully');
     }
 }
