@@ -45,13 +45,13 @@
                 <div class="mt-3">
 
                     @include('shared.idea-card')
-
+                    
                 </div>
             @endforeach
             <div class="mt-3">
-                {{ $ideas->links()}}
+                {{ $ideas->links() }}
             </div>
-                
+
 
         </div>
         <div class="col-3">
