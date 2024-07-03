@@ -15,11 +15,11 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 ## About Mikroblog
 <h3>Home Page</h3>
-<img src="./resources/assets/page.png" alt="#">
+<img src="./resources/assets/page.png" alt="#" width="486" height="250">
 <h3>Register Page</h3>
-<img src="./resources/assets/register.png" alt="#">
+<img src="./resources/assets/register.png" alt="#" width="486" height="250">
 <h3>Login Page</h3>
-<img src="./resources/assets/login.png" alt="#">
+<img src="./resources/assets/login.png" alt="#" width="486" height="250">
 
 
 ## Front End
