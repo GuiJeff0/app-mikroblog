@@ -28,4 +28,20 @@ class AuthController extends Controller
 
         return redirect()->route('home')->with('success','Idea created succesfully');
     }
+
+
+    public function login(){
+        return view("auth.login");
+    }
+
+    public function authenticate(){
+
+        $validated = request()->validate([
+            'email'=> 'required|email|unique:users,email',
+            'password'=> 'required|confirmed|min:8'
+        ]);
+
+
+        return redirect()->route('home')->with('success','Idea created succesfully');
+    }
 }

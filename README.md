@@ -18,6 +18,8 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 <img src="./resources/assets/page.png" alt="#">
 <h3>Register Page</h3>
 <img src="./resources/assets/register.png" alt="#">
+<h3>Login Page</h3>
+<img src="./resources/assets/login.png" alt="#">
 
 
 ## Front End
