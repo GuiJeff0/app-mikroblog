@@ -12,10 +12,16 @@
                     <div class="form-group mt-3">
                         <label for="email" class="text-dark">Email:</label><br>
                         <input type="text" name="email" id="email" class="form-control">
+                        @error('email')
+                            <span class=" d-block fs-6 text-danger mt-2"> {{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form-group mt-3">
                         <label for="password" class="text-dark">Password:</label><br>
                         <input type="password" name="password" id="password" class="form-control">
+                        @error('email')
+                            <span class=" d-block fs-6 text-danger mt-2"> {{ $message }}</span>
+                        @enderror
                     </div>
                     <div>
                         <a href="{{ route('google.redirect') }}" class="btn btn-primary mt-3"> SIGN IN WITH GOOGLE </a>

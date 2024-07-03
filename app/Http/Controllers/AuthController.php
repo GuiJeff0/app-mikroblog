@@ -38,10 +38,16 @@ class AuthController extends Controller
 
         $validated = request()->validate([
             'email'=> 'required|email|unique:users,email',
-            'password'=> 'required|confirmed|min:8'
+            'password'=> 'required|min:8'
         ]);
 
+      if ( auth()->attempt($validated)){
 
-        return redirect()->route('home')->with('success','Idea created succesfully');
+        request()->session()->regenerate();
+
+        return redirect()->route('home')->with('success','Logged created succesfully');
+      }
+
+        return redirect()->route('login')->withErrors(['email'=> 'Provided email error']);
     }
 }
