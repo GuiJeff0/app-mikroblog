@@ -37,7 +37,7 @@ class AuthController extends Controller
     public function authenticate(){
 
         $validated = request()->validate([
-            'email'=> 'required|email|unique:users,email',
+            'email'=> 'required|email',
             'password'=> 'required|min:8'
         ]);
 
@@ -49,5 +49,14 @@ class AuthController extends Controller
       }
 
         return redirect()->route('login')->withErrors(['email'=> 'Provided email error']);
+    }
+
+    public function logout(){
+        auth()->logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerate();
+
+        return redirect()->route('home')->with('success','Logged out successfully');
     }
 }
