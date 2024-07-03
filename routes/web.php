@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IdeaController;
@@ -17,3 +18,11 @@ Route::put("/ideas/{idea}", [IdeaController::class,"update"])->name('idea.update
 // Comments Routes
 
 Route::post('/ideas/{idea}/comments', [CommentController::class,'store'])->name('idea.comments.store');
+
+// Register Routes
+
+Route::get('/register', [AuthController::class,'register'])->name('register');
+Route::post('/register', [AuthController::class,'store']);
+
+Route::get('/google/redirect', [App\Http\Controllers\GoogleLoginController::class, 'redirectToGoogle'])->name('google.redirect');
+Route::get('/google/callback', [App\Http\Controllers\GoogleLoginController::class, 'handleGoogleCallback'])->name('google.callback');
