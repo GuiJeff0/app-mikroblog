@@ -6,7 +6,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
-<!--<a href="{{ route('google.redirect') }}" class="btn btn-primary mt-3"> Sign up </a>-->
+
 ## About Laravel
 
 Main 
@@ -14,7 +14,10 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 
 ## About Mikroblog
+<h3>Home Page</h3>
 <img src="./resources/assets/page.png" alt="#">
+<h3>Register Page</h3>
+<img src="./resources/assets/register.png" alt="#">
 
 
 ## Front End
