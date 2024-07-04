@@ -10,10 +10,10 @@ Route::get('/', [DashboardController::class,'index'])->name('home');
 
 //Ideas Routes
 Route::get('/ideas/{idea}', [IdeaController::class,'show'])->name('idea.show');
-Route::post('/ideas', [IdeaController::class,'store'])->name('idea.store');
-Route::delete('/ideas/{idea}', [IdeaController::class,'destroy'])->name('idea.destroy');
-Route::get('/ideas/{idea}/edit', [IdeaController::class,'edit'])->name("idea.edit");
-Route::put("/ideas/{idea}", [IdeaController::class,"update"])->name('idea.update');
+Route::post('/ideas', [IdeaController::class,'store'])->name('idea.store')->middleware('auth');
+Route::delete('/ideas/{idea}', [IdeaController::class,'destroy'])->name('idea.destroy')->middleware('auth');
+Route::get('/ideas/{idea}/edit', [IdeaController::class,'edit'])->name("idea.edit")->middleware('auth');
+Route::put("/ideas/{idea}", [IdeaController::class,"update"])->name('idea.update')->middleware('auth');
 
 // Comments Routes
 
